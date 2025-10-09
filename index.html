@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClubStat — Рейтинг пользователей Clubhouse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f2efe4;
+            color: #44443c;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #4db579;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #4db579, #265d3e);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+        }
+
+        .filters {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid #c4c4b4;
+            background: white;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #44443c;
+            transition: all 0.2s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .filter-btn:hover {
+            border-color: #4db579;
+            background: #f3f2e3;
+        }
+
+        .filter-btn.active {
+            background: #4db579;
+            border-color: #4db579;
+            color: white;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        .stats {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .stats h1 {
+            font-size: 2rem;
+            color: #44443c;
+            margin-bottom: 0.5rem;
+        }
+
+        .stats p {
+            color: #7d7a7c;
+            font-size: 1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #4db579, #265d3e);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(77, 181, 121, 0.15);
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .rank {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: linear-gradient(135deg, #4db579, #265d3e);
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 8px rgba(77, 181, 121, 0.3);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .avatar {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #f3f2e3;
+        }
+
+        .user-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .name {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #44443c;
+            margin-bottom: 0.25rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .username {
+            color: #7d7a7c;
+            font-size: 0.9rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-top: 1px solid #f3f2e3;
+            margin-top: 0.75rem;
+        }
+
+        .followers {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #44443c;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .category {
+            background: #f3f2e3;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            color: #265d3e;
+            font-weight: 500;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+
+        .social-link {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            font-size: 1rem;
+        }
+
+        .social-link.instagram {
+            background: linear-gradient(135deg, #E1306C, #FD1D1D, #F77737);
+            color: white;
+        }
+
+        .social-link.twitter {
+            background: #1DA1F2;
+            color: white;
+        }
+
+        .social-link:hover {
+            transform: scale(1.1);
+        }
+
+        .load-more {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .load-more-btn {
+            padding: 1rem 2rem;
+            background: #4db579;
+            color: white;
+            border: none;
+            border-radius: 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .load-more-btn:hover {
+            background: #265d3e;
+            transform: scale(1.05);
+        }
+
+        .load-more-btn:disabled {
+            background: #c4c4b4;
+            cursor: not-allowed;
+            transform: scale(1);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: #7d7a7c;
+            display: none;
+        }
+
+        .loading.active {
+            display: block;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto 1rem;
+            border: 4px solid #f3f2e3;
+            border-top-color: #4db579;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: #7d7a7c;
+        }
+
+        .no-results h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #44443c;
+        }
+
+        footer {
+            background: white;
+            border-top: 1px solid #f3f2e3;
+            padding: 2rem 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+            color: #7d7a7c;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+                gap: 1rem;
+            }
+
+            .stats h1 {
+                font-size: 1.5rem;
+            }
+
+            .header-content {
+                justify-content: center;
+            }
+
+            .filters {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="/" class="logo">
+                <div class="logo-icon">C</div>
+                <span>ClubStat</span>
+            </a>
+            <div class="filters" id="filters">
+                <button class="filter-btn active" data-category="all">Все</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="stats">
+            <h1>Топ пользователей Clubhouse</h1>
+            <p id="total-count">Загрузка...</p>
+        </div>
+
+        <div class="grid" id="grid"></div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Загрузка...</p>
+        </div>
+
+        <div class="load-more">
+            <button class="load-more-btn" id="load-more">Загрузить еще</button>
+        </div>
+
+        <div class="no-results" id="no-results" style="display: none;">
+            <h2>Пользователи не найдены</h2>
+            <p>Попробуйте выбрать другую категорию</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>ClubStat — Статистика и рейтинг пользователей Clubhouse</p>
+            <p style="margin-top: 0.5rem;">Данные актуальны на момент последнего обновления</p>
+        </div>
+    </footer>
+
+    <script>
+        class ClubStatApp {
+            constructor() {
+                this.users = [];
+                this.filteredUsers = [];
+                this.displayedCount = 0;
+                this.itemsPerPage = 48;
+                this.currentCategory = 'all';
+                this.loading = false;
+                this.categories = new Set();
+
+                this.grid = document.getElementById('grid');
+                this.loadingEl = document.getElementById('loading');
+                this.loadMoreBtn = document.getElementById('load-more');
+                this.noResultsEl = document.getElementById('no-results');
+                this.filtersEl = document.getElementById('filters');
+
+                this.init();
+            }
+
+            async init() {
+                await this.loadData();
+                this.setupFilters();
+                this.setupScrollListener();
+                this.setupLoadMoreButton();
+                this.renderUsers();
+            }
+
+            async loadData() {
+                try {
+                    const response = await fetch('clubhouse_users.json');
+                    const data = await response.json();
+                    this.users = data.users;
+                    this.filteredUsers = [...this.users];
+
+                    // Собираем уникальные категории
+                    this.users.forEach(user => {
+                        if (user.category) {
+                            this.categories.add(user.category);
+                        }
+                    });
+
+                    document.getElementById('total-count').textContent = 
+                        `${this.users.length.toLocaleString('ru-RU')} пользователей`;
+                } catch (error) {
+                    console.error('Ошибка загрузки данных:', error);
+                    document.getElementById('total-count').textContent = 'Ошибка загрузки данных';
+                }
+            }
+
+            setupFilters() {
+                const sortedCategories = Array.from(this.categories).sort();
+                
+                sortedCategories.forEach(category => {
+                    const btn = document.createElement('button');
+                    btn.className = 'filter-btn';
+                    btn.textContent = category;
+                    btn.dataset.category = category;
+                    this.filtersEl.appendChild(btn);
+                });
+
+                this.filtersEl.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('filter-btn')) {
+                        this.filterByCategory(e.target.dataset.category);
+                        
+                        document.querySelectorAll('.filter-btn').forEach(btn => {
+                            btn.classList.remove('active');
+                        });
+                        e.target.classList.add('active');
+                    }
+                });
+            }
+
+            filterByCategory(category) {
+                this.currentCategory = category;
+                
+                if (category === 'all') {
+                    this.filteredUsers = [...this.users];
+                } else {
+                    this.filteredUsers = this.users.filter(user => user.category === category);
+                }
+
+                this.displayedCount = 0;
+                this.grid.innerHTML = '';
+                this.renderUsers();
+
+                if (this.filteredUsers.length === 0) {
+                    this.noResultsEl.style.display = 'block';
+                    this.loadMoreBtn.style.display = 'none';
+                } else {
+                    this.noResultsEl.style.display = 'none';
+                }
+            }
+
+            renderUsers() {
+                const usersToRender = this.filteredUsers.slice(
+                    this.displayedCount, 
+                    this.displayedCount + this.itemsPerPage
+                );
+
+                usersToRender.forEach(user => {
+                    const card = this.createUserCard(user);
+                    this.grid.appendChild(card);
+                });
+
+                this.displayedCount += usersToRender.length;
+
+                if (this.displayedCount >= this.filteredUsers.length) {
+                    this.loadMoreBtn.style.display = 'none';
+                } else {
+                    this.loadMoreBtn.style.display = 'block';
+                }
+            }
+
+            createUserCard(user) {
+                const card = document.createElement('div');
+                card.className = 'card';
+                
+                const socialLinks = [];
+                if (user.instagram) {
+                    socialLinks.push(`
+                        <a href="https://instagram.com/${user.instagram}" 
+                           target="_blank" 
+                           class="social-link instagram" 
+                           title="Instagram">📷</a>
+                    `);
+                }
+                if (user.twitter) {
+                    socialLinks.push(`
+                        <a href="https://twitter.com/${user.twitter}" 
+                           target="_blank" 
+                           class="social-link twitter" 
+                           title="Twitter">🐦</a>
+                    `);
+                }
+
+                card.innerHTML = `
+                    <div class="rank">#${user.rank}</div>
+                    <div class="card-header">
+                        <img src="${user.avatar_url}" 
+                             alt="${user.name}" 
+                             class="avatar"
+                             loading="lazy">
+                        <div class="user-info">
+                            <div class="name">${user.name}</div>
+                            <div class="username">@${user.username}</div>
+                        </div>
+                    </div>
+                    <div class="stats-row">
+                        <div class="followers">
+                            👥 ${user.followers_count.toLocaleString('ru-RU')}
+                        </div>
+                        ${user.category ? `<div class="category">${user.category}</div>` : ''}
+                    </div>
+                    ${socialLinks.length > 0 ? `
+                        <div class="social-links">
+                            ${socialLinks.join('')}
+                        </div>
+                    ` : ''}
+                `;
+
+                card.addEventListener('click', () => {
+                    window.open(user.profile_url, '_blank');
+                });
+
+                return card;
+            }
+
+            setupScrollListener() {
+                let ticking = false;
+
+                window.addEventListener('scroll', () => {
+                    if (!ticking) {
+                        window.requestAnimationFrame(() => {
+                            this.handleScroll();
+                            ticking = false;
+                        });
+                        ticking = true;
+                    }
+                });
+            }
+
+            handleScroll() {
+                if (this.loading) return;
+                if (this.displayedCount >= this.filteredUsers.length) return;
+
+                const scrollPosition = window.innerHeight + window.scrollY;
+                const threshold = document.body.offsetHeight - 800;
+
+                if (scrollPosition > threshold) {
+                    this.loadMore();
+                }
+            }
+
+            setupLoadMoreButton() {
+                this.loadMoreBtn.addEventListener('click', () => {
+                    this.loadMore();
+                });
+            }
+
+            loadMore() {
+                if (this.loading) return;
+                if (this.displayedCount >= this.filteredUsers.length) return;
+
+                this.loading = true;
+                this.loadingEl.classList.add('active');
+                this.loadMoreBtn.disabled = true;
+
+                setTimeout(() => {
+                    this.renderUsers();
+                    this.loading = false;
+                    this.loadingEl.classList.remove('active');
+                    this.loadMoreBtn.disabled = false;
+                }, 300);
+            }
+        }
+
+        // Инициализация приложения
+        document.addEventListener('DOMContentLoaded', () => {
+            new ClubStatApp();
+        });
+    </script>
+</body>
+</html>

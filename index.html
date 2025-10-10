@@ -328,6 +328,8 @@
 
         .load-more {
             text-align: center;
+            display: block;
+            margin: 0 auto;
             padding: 2rem 0;
         }
 
@@ -395,19 +397,25 @@
             font-weight: 600;
         }
 
-        footer {
-            background: white;
-            border-top: 1px solid #f2efe4;
-            padding: 2rem 1.5rem;
-            margin-top: 3rem;
+        .footer-section {
+            text-align: center;
+            padding: 2rem 0;
+            color: #918e85;
+            font-size: 0.95rem;
         }
 
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-            color: #918e85;
-            font-size: 0.9rem;
+        .footer-section p {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #5f5e54;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer-section a:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
@@ -489,13 +497,18 @@
             <h2>Пользователи не найдены</h2>
             <p>Попробуйте выбрать другую категорию</p>
         </div>
-    </main>
 
-    <footer>
-        <div class="footer-content">
-            <p>ClubStat — Статистика и рейтинг пользователей Clubhouse</p>
+        <div class="footer-section">
+            <p>
+                Сделано с <i class="fa-solid fa-heart" style="color: #c9302c;"></i> 
+                в Москве и Киеве в 2021 году
+            </p>
+            <p>
+                Используемые в дизайне иконки взяты из 
+                <a href="https://fontawesome.com" target="_blank">Font Awesome</a>
+            </p>
         </div>
-    </footer>
+    </main>
 
     <script>
         class ClubStatApp {

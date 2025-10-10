@@ -34,6 +34,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 1rem;
         }
 
         .logo {
@@ -48,6 +49,25 @@
 
         .logo i {
             font-size: 1.5rem;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .about-link {
+            color: #5f5e54;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .about-link:hover {
+            color: #44443c;
         }
 
         .filter-container {
@@ -390,12 +410,17 @@
             }
 
             .header-content {
-                flex-direction: column;
-                gap: 1rem;
+                flex-wrap: wrap;
+            }
+
+            .header-right {
+                order: 2;
+                width: 100%;
+                justify-content: space-between;
             }
 
             .filter-container {
-                width: 100%;
+                flex: 1;
             }
 
             .filter-select {
@@ -407,6 +432,11 @@
             .grid {
                 grid-template-columns: 1fr;
             }
+
+            .header-right {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
         }
     </style>
 </head>
@@ -417,10 +447,13 @@
                 <i class="fa-solid fa-wave-square"></i>
                 <span>ClubStat</span>
             </a>
-            <div class="filter-container">
-                <select class="filter-select" id="category-filter">
-                    <option value="all">Все категории</option>
-                </select>
+            <div class="header-right">
+                <a href="/about" class="about-link">О проекте</a>
+                <div class="filter-container">
+                    <select class="filter-select" id="category-filter">
+                        <option value="all">Все категории</option>
+                    </select>
+                </div>
             </div>
         </div>
     </header>

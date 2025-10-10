@@ -20,6 +20,7 @@
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/61810862_5800647d-9507-4717-bd35-a16ca2901aa4_thumbnail_250x250",
       "followers_count": 200409,
       "category": "Бизнес",
+      "foreign_agent": true,
       "instagram": "olegtinkov"
     },
     {
@@ -167,6 +168,7 @@
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/195264482_52554e8f-8483-4940-9477-7f1a9bee7d81_thumbnail_250x250",
       "followers_count": 72025,
       "category": "Политика",
+      "foreign_agent": true,
       "twitter": "sguriev"
     },
     {
@@ -210,7 +212,7 @@
     },
     {
       "rank": 22,
-      "name": "Wylsacom Wylsacom",
+      "name": "Wylsacom",
       "username": "wylsacom",
       "profile_url": "https://joinclubhouse.com/@wylsacom",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/5860739_44a64924-0400-46a1-a5b4-ef8fcfe43502_thumbnail_250x250",
@@ -258,6 +260,7 @@
       "profile_url": "https://joinclubhouse.com/@max_katz",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/1560216255_2cb8f2bc-6dab-4e11-b957-8517b31a5023_thumbnail_250x250",
       "followers_count": 53221,
+      "foreign_agent": true,
       "category": "Политика",
       "twitter": "max_katz"
     },
@@ -482,6 +485,7 @@
       "profile_url": "https://joinclubhouse.com/@mich261213",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/1335598786_b61955dd-3a63-43f4-9438-2f25554597d0_thumbnail_250x250",
       "followers_count": 36731,
+      "foreign_agent": true,
       "category": "Бизнес",
       "twitter": "mich261213"
     },
@@ -552,6 +556,7 @@
       "profile_url": "https://joinclubhouse.com/@mishakoz",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/1949557575_f024f682-6bbc-4e53-8f81-af998634caf3_thumbnail_250x250",
       "followers_count": 5483,
+      "foreign_agent": true,
       "category": "Медиа"
     },
     {

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Статистика, аналитика и рейтинг Clubhouse. Списки популярных пользователей, комнат и клубов. Расписание предстоящих событий">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Russian">
+    <meta name="author" content="Alexander Krushin">
+    <meta name="keywords" content="клабхаус,clubhouse,комнаты,пользователи,клубы,статистика,рейтинг,аналитика,топы,ch,пользователи clubhouse">
+    <title>О проекте — ClubStat</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f2efe4;
+            color: #5f5e54;
+            line-height: 1.7;
+        }
+
+        .header {
+            background: #f2efe4;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #e0ddd0;
+        }
+
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #5f5e54;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo i {
+            font-size: 1.5rem;
+        }
+
+        .back-link {
+            color: #5f5e54;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-link:hover {
+            color: #44443c;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #5f5e54;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero .subtitle {
+            font-size: 1.2rem;
+            color: #918e85;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .archive-notice {
+            background: white;
+            border-left: 4px solid #5f5e54;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+
+        .archive-notice p {
+            margin: 0;
+            color: #5f5e54;
+            font-size: 1rem;
+        }
+
+        .archive-notice strong {
+            font-weight: 600;
+        }
+
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            font-size: 1.75rem;
+            color: #5f5e54;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .section p {
+            color: #5f5e54;
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        .section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-member h3 {
+            font-size: 1.25rem;
+            color: #5f5e54;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .team-member p {
+            color: #918e85;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .podcast-section {
+            background: linear-gradient(135deg, #5f5e54 0%, #44443c 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .podcast-section h2 {
+            color: white;
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .podcast-section p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+
+
+        .podcast-section a:hover {
+            opacity: 0.8;
+        }
+
+        .podcast-embed {
+            margin-top: 2rem;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .podcast-embed iframe {
+            width: 100%;
+            border-radius: 8px;
+            border: none;
+        }
+
+        .podcast-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: white;
+            color: #5f5e54;
+            padding: 0.8rem 1.5rem;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        .podcast-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .highlights {
+            background: #f7f6f1;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .highlights h3 {
+            font-size: 1.1rem;
+            color: #5f5e54;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .highlights ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .highlights li {
+            color: #5f5e54;
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .highlights li:before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #918e85;
+        }
+
+        .footer-section {
+            text-align: center;
+            padding: 2rem 0;
+            color: #918e85;
+            font-size: 0.95rem;
+        }
+
+        .footer-section p {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #5f5e54;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.05rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+
+            .podcast-section {
+                padding: 1.5rem;
+            }
+
+            .team {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="/" class="logo">
+                <i class="fa-solid fa-wave-square"></i>
+                <span>ClubStat</span>
+            </a>
+            <a href="/" class="back-link">
+                <i class="fa-solid fa-arrow-left"></i>
+                К рейтингу
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="hero">
+            <h1>О проекте ClubStat</h1>
+            <p class="subtitle">
+                Первый в мире сервис рейтинга, статистики и аналитики Clubhouse. 
+                В автоматическом режиме собираем для вас актуальную информацию о самых 
+                популярных комнатах, клубах и пользователях.
+            </p>
+        </div>
+
+        <div class="archive-notice">
+            <p>
+                Сервис прекратил свою работу 11 мая 2022 года. Данные статистики более 
+                <strong>не обновляются</strong> и носят архивный характер.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Команда</h2>
+            <div class="team">
+                <div class="team-member">
+                    <h3>Александр Крушин</h3>
+                    <p>Придумал, написал код и запустил сервис, общался с инвесторами</p>
+                </div>
+                <div class="team-member">
+                    <h3>Сергей Сурепин</h3>
+                    <p>Общался с медиа и отвечал на вопросы пользователей</p>
+                </div>
+                <div class="team-member">
+                    <h3>Юлия Хандожко</h3>
+                    <p>Вручную составила первый рейтинг пользователей Clubhouse</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero">
+            <p class="subtitle">
+                По всем вопросам пишите в <a href="https://t.me/krushin_ru">Telegram</a> или на <a href="mailto:akrushin@gmail.com">почту</a>
+            </p>
+        </div>
+
+        <div class="podcast-section">
+            <h2>
+                <i class="fa-solid fa-podcast" style="margin-right: 5px;"></i>
+                Послушать про нас
+            </h2>
+            <p>
+                В июне 2021 года Александр Крушин стал одним из гостей выпуска подкаста про&nbsp;технологии «Запуск завтра», посвященного Clubhouse.
+                В нем он раскрыл подробности о работе нашего сервиса аналитики.
+            </p>
+
+            <div class="highlights">
+                <h3>О чем выпуск:</h3>
+                <ul>
+                    <li>Как собиралась статистика и кому она была нужна</li>
+                    <li>Почему Clubhouse банил аккаунты пользователей</li>
+                    <li>Какие уязвимости нашли в API Clubhouse</li>
+                </ul>
+            </div>
+
+            <div class="podcast-embed">
+                <iframe frameborder="0" allow="clipboard-write" style="border:none;width:100%;height:200px;" height="200" src="https://music.yandex.ru/iframe/album/9294155/track/84455819">Слушайте <a href="https://music.yandex.ru/track/84455819?utm_source=web&utm_medium=copy_link">Как хакеры взломали Clubhouse</a> на Яндекс Музыке</iframe>
+            </div>
+
+            <a href="https://thecode.media/clubhouse-2/" target="_blank" class="podcast-link">
+                Читать текстовую версию
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="section">
+            <h2>Как это работало</h2>
+            <p>
+                ClubStat использовал неофициальный API Clubhouse для сбора данных. 
+                Сервис симулировал активность десятков пользователей-ботов, которые 
+                вели себя как реальные люди и собирали статистику по комнатам в реальном времени.
+            </p>
+            <p>
+                Рекламодатели могли анализировать эффективность интеграций, отслеживать 
+                поминутные изменения аудитории и выявлять, какие спикеры привлекали 
+                наибольший трафик в комнаты.
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <p>
+                Сделано с <i class="fa-solid fa-heart" style="color: #c9302c;"></i> 
+                в Москве и Киеве в 2021 году
+            </p>
+            <p>
+                Используемые в дизайне иконки взяты из 
+                <a href="https://fontawesome.com" target="_blank">Font Awesome</a>
+            </p>
+        </div>
+    </main>
+</body>
+</html>
+

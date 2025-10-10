@@ -1,6 +1,5 @@
 {
   "total_users": 2203,
-  "parsed_at": "2025-10-10T02:32:04+03:00",
   "users": [
     {
       "rank": 1,
@@ -10,6 +9,7 @@
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/1944254361_c79db67c-2e6c-46ff-a0e8-320087dffb89_thumbnail_250x250",
       "followers_count": 306812,
       "category": "Медиа",
+      "foreign_agent": true,
       "instagram": "varlamov"
     },
     {

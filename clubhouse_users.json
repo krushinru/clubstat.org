@@ -719,6 +719,7 @@
       "profile_url": "https://joinclubhouse.com/@leonidvolkov",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/680093365_531efdbd-4a73-42c5-a9c8-36de8d25653e_thumbnail_250x250",
       "followers_count": 27106,
+      "foreign_agent": true,
       "category": "Политика",
       "twitter": "leonidvolkov"
     },
@@ -749,6 +750,7 @@
       "profile_url": "https://joinclubhouse.com/@masha_borzo",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/636872483_ca668468-6f09-4f1e-b916-439b98b76b6f_thumbnail_250x250",
       "followers_count": 26336,
+      "foreign_agent": true,
       "category": "Медиа",
       "instagram": "masha_borzo",
       "twitter": "mborzunova"
@@ -980,6 +982,7 @@
       "username": "aavst",
       "profile_url": "https://joinclubhouse.com/@aavst",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/1864898548_2224aacd-d3dd-479f-9195-3262c2bf9919_thumbnail_250x250",
+      "foreign_agent": true,
       "followers_count": 21305,
       "category": "Медиа"
     },
@@ -1323,6 +1326,7 @@
       "profile_url": "https://joinclubhouse.com/@alrod",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/478866166_a3da330b-8403-4bd5-a0dd-63a6db8914ec_thumbnail_250x250",
       "followers_count": 17182,
+      "foreign_agent": true,
       "category": "Искусство",
       "instagram": "alexander.rodnyansky"
     },
@@ -1451,8 +1455,9 @@
       "name": "Евгений Ройзман",
       "username": "roizmangbn",
       "profile_url": "https://joinclubhouse.com/@roizmangbn",
-      "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/1547921322_98328374-7f31-4ec3-ae31-efa191339600_thumbnail_250x250",
+      "avatar_url": "no-ava.png",
       "followers_count": 15872,
+      "foreign_agent": true,
       "category": "Политика",
       "twitter": "roizmangbn"
     },
@@ -1918,6 +1923,7 @@
       "profile_url": "https://joinclubhouse.com/@michaelnacke",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/460030695_5205668a-91d4-436b-b4c3-6304dd7fcab9_thumbnail_250x250",
       "followers_count": 11776,
+      "foreign_agent": true,
       "category": "Политика",
       "twitter": "michaelnacke"
     },
@@ -1948,6 +1954,7 @@
       "profile_url": "https://joinclubhouse.com/@verzilov",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/32064064_cd433251-68f5-45bc-8c4d-fa02b3c16058_thumbnail_250x250",
       "followers_count": 11630,
+      "foreign_agent": true,
       "category": "Политика",
       "instagram": "petyaverzilov",
       "twitter": "gruppa_voina"
@@ -2019,6 +2026,7 @@
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/1471062820_aa82e1a0-90f0-4112-968f-c85a402b6ae0_thumbnail_250x250",
       "followers_count": 11271,
       "category": "Медиа",
+      "foreign_agent": true,
       "instagram": "damiank",
       "twitter": "kudriavtsev"
     },
@@ -2692,6 +2700,7 @@
       "profile_url": "https://joinclubhouse.com/@ioannzh",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/929733464_6cd01ade-fb93-44e8-846a-6fa72bc0413e_thumbnail_250x250",
       "followers_count": 8507,
+      "foreign_agent": true,
       "category": "Политика",
       "instagram": "ioannzh",
       "twitter": "ioannZH"
@@ -3322,6 +3331,7 @@
       "profile_url": "https://joinclubhouse.com/@shaveddinov",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/660167520_c1ecb329-a1ac-4f19-a5f0-464d366c1a54_thumbnail_250x250",
       "followers_count": 7330,
+      "foreign_agent": true,
       "category": "Политика",
       "instagram": "rshaveddinov",
       "twitter": "rshaveddinov"
@@ -3496,6 +3506,7 @@
       "profile_url": "https://joinclubhouse.com/@pevchikh",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/231820754_e6b943cd-bb88-44ee-b17c-8e8892617ac0_thumbnail_250x250",
       "followers_count": 7065,
+      "foreign_agent": true,
       "category": "Политика"
     },
     {
@@ -3546,7 +3557,7 @@
       "name": "Эхо Москвы",
       "username": "echomsk",
       "profile_url": "https://joinclubhouse.com/@echomsk",
-      "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/1974294135_87a406d4-752f-4934-a0b7-f4fee0916d12_thumbnail_250x250",
+      "avatar_url": "no-ava.png",
       "followers_count": 6959,
       "category": "Бренды",
       "instagram": "echomsk",
@@ -5148,7 +5159,7 @@
       "profile_url": "https://joinclubhouse.com/@boriszarkov",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/457432076_4e900d22-f42b-48c7-8c16-7ff6857ba8b3_thumbnail_250x250",
       "followers_count": 4930,
-      "category": null,
+      "category": "Бизнес",
       "instagram": "boris_zarkov"
     },
     {
@@ -5227,7 +5238,7 @@
       "profile_url": "https://joinclubhouse.com/@maria_ivakova",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/676722769_94ba12ab-6f28-44d5-b09e-343037f712b6_thumbnail_250x250",
       "followers_count": 4872,
-      "category": null
+      "category": "Медиа"
     },
     {
       "rank": 519,
@@ -6039,6 +6050,7 @@
       "profile_url": "https://joinclubhouse.com/@kilgortraut",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/1962575588_e634c4da-7f02-458c-afb6-c40b6d90d4d8_thumbnail_250x250",
       "followers_count": 4393,
+      "foreign_agent": true,
       "category": "Медиа"
     },
     {
@@ -6170,7 +6182,7 @@
       "profile_url": "https://joinclubhouse.com/@miaboyka3",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/11882058_cfd8f45a-9775-4ba9-8be6-d6d034d44164_thumbnail_250x250",
       "followers_count": 4323,
-      "category": null
+      "category": "Искусство"
     },
     {
       "rank": 613,
@@ -6179,6 +6191,7 @@
       "profile_url": "https://joinclubhouse.com/@m_ganapolsky",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/1754493044_3b1643c4-fb6c-4b74-9caa-75517637ed8c_thumbnail_250x250",
       "followers_count": 4320,
+      "foreign_agent": true,
       "category": "Медиа"
     },
     {
@@ -6473,7 +6486,8 @@
       "profile_url": "https://joinclubhouse.com/@linorg",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/1327901073_da62475d-a106-4d8c-8de1-595722919574_thumbnail_250x250",
       "followers_count": 4147,
-      "category": null
+      "foreign_agent": true,
+      "category": "Искусство"
     },
     {
       "rank": 643,
@@ -6544,6 +6558,7 @@
       "profile_url": "https://joinclubhouse.com/@timdziadko",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/186975795_d3fb4bcc-f67b-42b8-a2d4-a63a9734223a_thumbnail_250x250",
       "followers_count": 4085,
+      "foreign_agent": true,
       "category": "Медиа",
       "instagram": "timdziadko",
       "twitter": "timdziadko"
@@ -6632,7 +6647,7 @@
       "name": "Anna Бизнес С Китаем",
       "username": "annaak1011",
       "profile_url": "https://joinclubhouse.com/@annaak1011",
-      "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/591482766_7a66529a-6e88-4f05-96ac-914adfaed192_thumbnail_250x250",
+      "avatar_url": "no-ava.png",
       "followers_count": 4009,
       "category": "Бизнес",
       "instagram": "annaak1011"
@@ -7037,7 +7052,7 @@
       "profile_url": "https://joinclubhouse.com/@tatyanacosmos",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/1515232753_0b6c2cae-99aa-41c9-b967-ee6a9cd6eae5_thumbnail_250x250",
       "followers_count": 3887,
-      "category": null
+      "category": "Блогеры"
     },
     {
       "rank": 699,
@@ -7087,7 +7102,7 @@
       "profile_url": "https://joinclubhouse.com/@oskarhartmann",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/269705462_1a0166e4-a435-46d6-8756-168a69a7b81a_thumbnail_250x250",
       "followers_count": 3867,
-      "category": null,
+      "category": "Бизнес",
       "instagram": "oskar_hartmann"
     },
     {
@@ -7296,7 +7311,7 @@
       "name": "Михаил Владимиров",
       "username": "fatherm",
       "profile_url": "https://joinclubhouse.com/@fatherm",
-      "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/1129192851_ee40e616-a699-4ea5-9541-c9f15095f487_thumbnail_250x250",
+      "avatar_url": "no-ava.png",
       "followers_count": 3753,
       "category": null,
       "instagram": "michael_vladimirov"
@@ -7460,7 +7475,7 @@
       "profile_url": "https://joinclubhouse.com/@hoffmanksenia",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/173739593_fa8e6dcf-c261-45af-9d57-ed29d8093126_thumbnail_250x250",
       "followers_count": 3693,
-      "category": null,
+      "category": "Блогеры",
       "twitter": "HoffmanKsenia"
     },
     {
@@ -7480,6 +7495,7 @@
       "username": "chernyak",
       "profile_url": "https://joinclubhouse.com/@chernyak",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/1146100200_3b66e5be-7d32-4f1b-bb3b-8d8178c9c838_thumbnail_250x250",
+      "foreign_agent": true,
       "followers_count": 3687,
       "category": "Искусство"
     },
@@ -7562,7 +7578,7 @@
       "profile_url": "https://joinclubhouse.com/@galyonkin",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/127555530_61f9597f-13e7-4128-8143-df86b30c1e31_thumbnail_250x250",
       "followers_count": 3648,
-      "category": null,
+      "category": "Технологии",
       "twitter": "galyonkin"
     },
     {
@@ -8374,6 +8390,7 @@
       "profile_url": "https://joinclubhouse.com/@adagamov",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/1072310293_accf6b36-c4e1-40ef-8984-84e2c59f10cd_thumbnail_250x250",
       "followers_count": 3381,
+      "foreign_agent": true,
       "category": "Политика",
       "twitter": "adagamov"
     },
@@ -8406,7 +8423,7 @@
       "profile_url": "https://joinclubhouse.com/@ilyatsentsiper",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/1032966733_97fd2ca4-d2e9-4e51-a5e4-5331884dd405_thumbnail_250x250",
       "followers_count": 3380,
-      "category": null
+      "category": "Медиа"
     },
     {
       "rank": 834,
@@ -8434,7 +8451,8 @@
       "profile_url": "https://joinclubhouse.com/@romenskiy",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/1754211886_795d51b1-7855-46e3-82b0-449160c7d8c8_thumbnail_250x250",
       "followers_count": 3366,
-      "category": null,
+      "foreign_agent": true,
+      "category": "Медиа",
       "twitter": "Romenskiy"
     },
     {
@@ -8656,7 +8674,7 @@
       "profile_url": "https://joinclubhouse.com/@krisvazovsky",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/362128748_b2faa531-b7d7-447e-8b60-6809bedfb7eb_thumbnail_250x250",
       "followers_count": 3306,
-      "category": "Медиа"
+      "category": "Блогеры"
     },
     {
       "rank": 859,
@@ -8742,7 +8760,7 @@
       "name": "Valera Taran",
       "username": "valerataran",
       "profile_url": "https://joinclubhouse.com/@valerataran",
-      "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/782218806_56974909-9308-4919-b9bc-29ee03554ef2_thumbnail_250x250",
+      "avatar_url": "no-ava.png",
       "followers_count": 3278,
       "category": null,
       "instagram": "valerataran"
@@ -8805,7 +8823,7 @@
       "profile_url": "https://joinclubhouse.com/@gabrelyanov",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/1006303320_b7a91f80-af6e-4088-8a37-30646dbd6405_thumbnail_250x250",
       "followers_count": 3266,
-      "category": null,
+      "category": "Медиа",
       "twitter": "gabrelyanov"
     },
     {
@@ -8876,7 +8894,7 @@
       "profile_url": "https://joinclubhouse.com/@usoltsev",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/2073491857_9dbd4dfc-ab3b-4771-b1a5-84401e50bd5f_thumbnail_250x250",
       "followers_count": 3251,
-      "category": null,
+      "category": "Блогеры",
       "instagram": "moscowwalks",
       "twitter": "usolt"
     },
@@ -9454,7 +9472,7 @@
       "profile_url": "https://joinclubhouse.com/@ilyabirman",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/1787559109_12e2b4d9-b170-47ee-a12f-f7ba0d75ac0d_thumbnail_250x250",
       "followers_count": 3085,
-      "category": null,
+      "category": "Дизайн",
       "instagram": "ilyabirman",
       "twitter": "ilyabirman"
     },
@@ -9826,6 +9844,7 @@
       "profile_url": "https://joinclubhouse.com/@mikhailfishman",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/136950120_0e8b320c-d8e3-4bc6-aaf7-cd3249d7b309_thumbnail_250x250",
       "followers_count": 2995,
+      "foreign_agent": true,
       "category": "Медиа",
       "twitter": "MikhailFishman"
     },
@@ -10658,7 +10677,7 @@
       "name": "Pavel Mikhaylov",
       "username": "seoremica",
       "profile_url": "https://joinclubhouse.com/@seoremica",
-      "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/546953991_7b7e65eb-dcae-418a-be25-2787ebdf6395_thumbnail_250x250",
+      "avatar_url": "no-ava.png",
       "followers_count": 2783,
       "category": "Маркетинг"
     },
@@ -11217,7 +11236,7 @@
       "name": "Eugene Rishon",
       "username": "eugenerishon",
       "profile_url": "https://joinclubhouse.com/@eugenerishon",
-      "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/2651664_2c6665e4-5e32-48ab-833c-09a7ba1a2a46_thumbnail_250x250",
+      "avatar_url": "no-ava.png",
       "followers_count": 2682,
       "category": null,
       "instagram": "eugenerishon"
@@ -11594,7 +11613,8 @@
       "name": "Natalia Sindeeva",
       "username": "podarok",
       "profile_url": "https://joinclubhouse.com/@podarok",
-      "avatar_url": "_thumbnail_250x250",
+      "avatar_url": "no-ava.png",
+      "foreign_agent": true,
       "followers_count": 2603,
       "category": "Медиа"
     },
@@ -11954,7 +11974,7 @@
       "profile_url": "https://joinclubhouse.com/@malakhov007",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/1307359794_89ad3976-ab89-49c0-97e0-0c0dab35fc60_thumbnail_250x250",
       "followers_count": 2540,
-      "category": null,
+      "category": "Медиа",
       "instagram": "malakhov007"
     },
     {
@@ -12234,7 +12254,7 @@
       "name": "Zhanna Denisova .denisova",
       "username": "zhanna.denisova",
       "profile_url": "https://joinclubhouse.com/@zhanna.denisova",
-      "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/870195178_e2686d87-c20e-4c66-a128-ff7821dd40a2_thumbnail_250x250",
+      "avatar_url": "no-ava.png",
       "followers_count": 2485,
       "category": "Медицина",
       "instagram": "zhanna.denisova"
@@ -13558,7 +13578,7 @@
       "name": "Ria Maria Dsouza",
       "username": "riariariaa",
       "profile_url": "https://joinclubhouse.com/@riariariaa",
-      "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/220312464_60c2cb7a-19d3-4342-ad2a-de6744fe27f4_thumbnail_250x250",
+      "avatar_url": "no-ava.png",
       "followers_count": 2266,
       "category": "Маркетинг",
       "instagram": "riariariaa"
@@ -13913,7 +13933,7 @@
       "name": "Yana Gorbunova",
       "username": "catchmemydear",
       "profile_url": "https://joinclubhouse.com/@catchmemydear",
-      "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/181048495_a4b24656-6b5c-40dc-a60a-cc59cf83d395_thumbnail_250x250",
+      "avatar_url": "no-ava.png",
       "followers_count": 2194,
       "category": null,
       "instagram": "catchmemydear"
@@ -14236,7 +14256,7 @@
       "name": "Irene Dubin",
       "username": "irishad",
       "profile_url": "https://joinclubhouse.com/@irishad",
-      "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/1206583931_9390d300-cb3e-48e5-b1c4-1d288afab4a9_thumbnail_250x250",
+      "avatar_url": "no-ava.png",
       "followers_count": 2154,
       "category": null,
       "instagram": "psychedelicsintegration"
@@ -14557,7 +14577,7 @@
       "name": "Kate Saymour",
       "username": "saysaymour",
       "profile_url": "https://joinclubhouse.com/@saysaymour",
-      "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/1459032315_aeb01483-fe15-48da-8f6f-cc90e5b5b5eb_thumbnail_250x250",
+      "avatar_url": "no-ava.png",
       "followers_count": 2093,
       "category": null,
       "instagram": "say_saymour"
@@ -15965,10 +15985,10 @@
     },
     {
       "rank": 1585,
-      "name": "Anton Fedorov .anton",
+      "name": "Anton Fedorov",
       "username": "fedorov.anton",
       "profile_url": "https://joinclubhouse.com/@fedorov.anton",
-      "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/575088759_fd83d88f-0034-4bd7-9c34-ca9957f41cce_thumbnail_250x250",
+      "avatar_url": "no-ava.png",
       "followers_count": 1876,
       "category": "Маркетинг",
       "instagram": "anton.nikolayevich"
@@ -16054,7 +16074,7 @@
     },
     {
       "rank": 1594,
-      "name": "Татьяна Самойлович .tatjana",
+      "name": "Татьяна Самойлович",
       "username": "psy.tatjana",
       "profile_url": "https://joinclubhouse.com/@psy.tatjana",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/1729950970_8b34457b-4eee-4c57-b456-920fd94679a7_thumbnail_250x250",
@@ -16188,7 +16208,7 @@
       "profile_url": "https://joinclubhouse.com/@thebodyabodya",
       "avatar_url": "https://production-clubhouse-avatars.s3.amazonaws.com:443/547697113_86ccb91d-0a88-4f19-8bd9-7b79e9a74d8b_thumbnail_250x250",
       "followers_count": 1847,
-      "category": null,
+      "category": "Маркетинг",
       "twitter": "THEBODYABODYA"
     },
     {

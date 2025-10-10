@@ -134,28 +134,16 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
 
-        .rank {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: #5f5e54;
-            color: white;
-            min-width: 32px;
-            height: 32px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            font-size: 0.85rem;
-            padding: 0 0.5rem;
-        }
-
         .card-header {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             gap: 1rem;
             margin-bottom: 1rem;
+        }
+
+        .avatar-wrapper {
+            position: relative;
+            flex-shrink: 0;
         }
 
         .avatar {
@@ -163,13 +151,30 @@
             height: 56px;
             border-radius: 50%;
             object-fit: cover;
-            flex-shrink: 0;
+        }
+
+        .rank {
+            position: absolute;
+            bottom: -4px;
+            right: -4px;
+            background: #5f5e54;
+            color: white;
+            min-width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.75rem;
+            padding: 0 0.35rem;
+            border: 2px solid white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .user-info {
             flex: 1;
             min-width: 0;
-            padding-right: 2.5rem;
         }
 
         .name {
@@ -177,9 +182,51 @@
             font-size: 1rem;
             color: #5f5e54;
             margin-bottom: 0.2rem;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .foreign-agent {
+            color: #c9302c;
+            font-size: 0.85rem;
+            cursor: help;
+            position: relative;
+            display: inline-flex;
+        }
+
+        .foreign-agent-tooltip {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #44443c;
+            color: white;
+            padding: 0.4rem 0.7rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
             white-space: nowrap;
+            transition: all 0.2s ease;
+            pointer-events: none;
+            font-weight: 500;
+            z-index: 10;
+        }
+
+        .foreign-agent-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 5px solid transparent;
+            border-top-color: #44443c;
+        }
+
+        .foreign-agent:hover .foreign-agent-tooltip {
+            visibility: visible;
+            opacity: 1;
         }
 
         .username {
@@ -196,6 +243,7 @@
             align-items: center;
             padding-top: 0.75rem;
             border-top: 1px solid #f2efe4;
+            gap: 0.5rem;
         }
 
         .followers {
@@ -212,22 +260,13 @@
             font-size: 0.85rem;
         }
 
-        .category {
-            background: #f2efe4;
-            padding: 0.25rem 0.65rem;
-            border-radius: 10px;
-            font-size: 0.8rem;
-            color: #5f5e54;
-            font-weight: 500;
-        }
-
-        .social-links {
+        .right-section {
             display: flex;
-            gap: 0.4rem;
-            margin-top: 0.75rem;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .social-link {
+        .twitter-link {
             width: 28px;
             height: 28px;
             border-radius: 6px;
@@ -239,11 +278,22 @@
             font-size: 0.85rem;
             background: #f2efe4;
             color: #5f5e54;
+            flex-shrink: 0;
         }
 
-        .social-link:hover {
+        .twitter-link:hover {
             background: #5f5e54;
             color: white;
+        }
+
+        .category {
+            background: #f2efe4;
+            padding: 0.25rem 0.65rem;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            color: #5f5e54;
+            font-weight: 500;
+            white-space: nowrap;
         }
 
         .load-more {
@@ -513,39 +563,37 @@
                 const card = document.createElement('div');
                 card.className = 'card';
                 
-                const socialLinks = [];
-                if (user.instagram) {
-                    socialLinks.push(`
-                        <a href="https://instagram.com/${user.instagram}" 
-                           target="_blank" 
-                           class="social-link" 
-                           onclick="event.stopPropagation()"
-                           title="Instagram">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    `);
-                }
-                if (user.twitter) {
-                    socialLinks.push(`
-                        <a href="https://twitter.com/${user.twitter}" 
-                           target="_blank" 
-                           class="social-link"
-                           onclick="event.stopPropagation()"
-                           title="Twitter">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                    `);
-                }
+                const foreignAgentBadge = user.foreign_agent ? `
+                    <span class="foreign-agent">
+                        <i class="fa-solid fa-asterisk"></i>
+                        <span class="foreign-agent-tooltip">Признан иноагентом</span>
+                    </span>
+                ` : '';
+
+                const twitterLink = user.twitter ? `
+                    <a href="https://twitter.com/${user.twitter}" 
+                       target="_blank" 
+                       class="twitter-link"
+                       onclick="event.stopPropagation()"
+                       title="Twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                ` : '';
 
                 card.innerHTML = `
-                    <div class="rank">#${user.rank}</div>
                     <div class="card-header">
-                        <img src="${user.avatar_url}" 
-                             alt="${user.name}" 
-                             class="avatar"
-                             loading="lazy">
+                        <div class="avatar-wrapper">
+                            <img src="${user.avatar_url}" 
+                                 alt="${user.name}" 
+                                 class="avatar"
+                                 loading="lazy">
+                            <div class="rank">#${user.rank}</div>
+                        </div>
                         <div class="user-info">
-                            <div class="name">${user.name}</div>
+                            <div class="name">
+                                <span>${user.name}</span>
+                                ${foreignAgentBadge}
+                            </div>
                             <div class="username">@${user.username}</div>
                         </div>
                     </div>
@@ -554,13 +602,11 @@
                             <i class="fa-solid fa-users"></i>
                             ${user.followers_count.toLocaleString('ru-RU')}
                         </div>
-                        ${user.category ? `<div class="category">${user.category}</div>` : ''}
-                    </div>
-                    ${socialLinks.length > 0 ? `
-                        <div class="social-links">
-                            ${socialLinks.join('')}
+                        <div class="right-section">
+                            ${twitterLink}
+                            ${user.category ? `<div class="category">${user.category}</div>` : ''}
                         </div>
-                    ` : ''}
+                    </div>
                 `;
 
                 card.addEventListener('click', () => {

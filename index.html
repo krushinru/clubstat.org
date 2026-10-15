@@ -270,6 +270,43 @@
             opacity: 1;
         }
 
+        .name > span:first-child {
+            min-width: 0;
+            overflow-wrap: anywhere;
+        }
+
+        button.registry-toggle {
+            border: 0;
+            background: transparent;
+            padding: 0.4rem;
+            min-width: 32px;
+            min-height: 32px;
+            flex-shrink: 0;
+            font: inherit;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .registry-toggle:focus-visible {
+            outline: 2px solid currentColor;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        .registry-notes {
+            margin-top: 0.8rem;
+            border-top: 1px solid #e7e5dc;
+            padding-top: 0.6rem;
+            font-size: 0.8rem;
+            line-height: 1.5;
+            color: #5f5e54;
+            overflow-wrap: anywhere;
+        }
+
+        .registry-notes p { margin: 0 0 0.6rem; }
+        .registry-notes p:last-child { margin-bottom: 0; }
+        .registry-notes a { color: #9d2926; text-decoration: underline; }
+
         .username {
             color: #918e85;
             font-size: 0.9rem;
@@ -524,6 +561,7 @@
         class ClubStatApp {
             constructor() {
                 this.users = [];
+                this.registrySources = {};
                 this.filteredUsers = [];
                 this.displayedCount = 0;
                 this.itemsPerPage = 48;
@@ -553,6 +591,7 @@
                     const response = await fetch('clubhouse_users.json');
                     const data = await response.json();
                     this.users = data.users;
+                    this.registrySources = data.registry_sources || {};
                     this.filteredUsers = [...this.users];
 
                     this.users.forEach(user => {
@@ -630,7 +669,7 @@
                 const card = document.createElement('div');
                 card.className = 'card';
                 
-                const foreignAgentBadge = user.foreign_agent ? `
+                const foreignAgentBadge = user.foreign_agent && !user.registry_notes?.length ? `
                     <span class="foreign-agent">
                         <i class="fa-solid fa-asterisk"></i>
                         <span class="foreign-agent-tooltip">Признан иноагентом</span>
@@ -676,11 +715,71 @@
                     </div>
                 `;
 
+                this.appendRegistryNotes(card, user);
+
                 card.addEventListener('click', () => {
                     window.open(user.profile_url, '_blank');
                 });
 
                 return card;
+            }
+
+            appendRegistryNotes(card, user) {
+                const labels = {
+                    foreign_agent: ['*', 'Включён в реестр иностранных агентов Минюста России.'],
+                    rosfinmonitoring: ['**', 'Включён в перечень Росфинмониторинга: организации и физические лица, в отношении которых имеются сведения об их причастности к экстремистской деятельности или терроризму.']
+                };
+                const formatDate = value => value.slice(0, 10).split('-').reverse().join('.');
+                const panel = document.createElement('div');
+                panel.className = 'registry-notes';
+                panel.id = `registry-notes-${user.rank}`;
+                panel.hidden = true;
+                panel.addEventListener('click', event => event.stopPropagation());
+                const symbols = [];
+
+                for (const note of user.registry_notes || []) {
+                    const source = this.registrySources[note.source];
+                    const label = labels[note.type];
+                    if (!source || !label) continue;
+                    let url;
+                    try { url = new URL(source.url); } catch { continue; }
+                    if (url.protocol !== 'https:' || !['minjust.gov.ru', 'www.minjust.gov.ru', 'fedsfm.ru', 'www.fedsfm.ru'].includes(url.hostname)) continue;
+
+                    symbols.push(label[0]);
+                    const paragraph = document.createElement('p');
+                    paragraph.append(`${label[0]} ${label[1]} `);
+                    const link = document.createElement('a');
+                    link.href = url.href;
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
+                    link.textContent = `${source.title}, запись № ${note.record_number}: ${note.registry_name}`;
+                    paragraph.append(link);
+                    if (note.included_on) paragraph.append(`. Дата включения: ${formatDate(note.included_on)}`);
+                    if (source.source_updated_at) {
+                        paragraph.append(`. Реестр от ${formatDate(source.source_updated_at)}`);
+                    } else {
+                        paragraph.append('. Дата обновления перечня в выгрузке не указана');
+                    }
+                    paragraph.append(`. Выгрузка получена ${formatDate(source.received_on)}, проверена ${formatDate(source.checked_on)}.`);
+                    panel.append(paragraph);
+                }
+                if (!symbols.length) return;
+
+                const button = document.createElement('button');
+                button.type = 'button';
+                button.className = 'foreign-agent registry-toggle';
+                button.textContent = symbols.join(' / ');
+                button.title = 'Сведения о реестрах и источники';
+                button.setAttribute('aria-label', `Сведения о реестрах: ${user.name}`);
+                button.setAttribute('aria-controls', panel.id);
+                button.setAttribute('aria-expanded', 'false');
+                button.addEventListener('click', event => {
+                    event.stopPropagation();
+                    panel.hidden = !panel.hidden;
+                    button.setAttribute('aria-expanded', String(!panel.hidden));
+                });
+                card.querySelector('.name').append(button);
+                card.append(panel);
             }
 
             setupScrollListener() {

@@ -1,0 +1,823 @@
+{
+  "checked_on": "2026-10-16",
+  "scope": "Выбранные публичные лица. Непубличные пользователи не сопоставлялись. Это проверка предоставленных выгрузок, а не непрерывная проверка реестров.",
+  "sources": {
+    "minjust": {
+      "title": "Реестр иностранных агентов Минюста России",
+      "url": "https://minjust.gov.ru/ru/pages/reestr-inostryannykh-agentov/",
+      "source_updated_at": "2026-10-09T17:00:00",
+      "received_on": "2026-10-16",
+      "checked_on": "2026-10-16",
+      "source_file": "export.xlsx",
+      "sha256": "6c18b3fde50ab2415635a0bcf3ed66f8f3d6b1943bb775499dcd1771476f9377"
+    },
+    "rosfinmonitoring": {
+      "title": "Перечень Росфинмониторинга",
+      "url": "https://www.fedsfm.ru/documents/terrorists-catalog-portal-act",
+      "source_updated_at": null,
+      "received_on": "2026-10-16",
+      "checked_on": "2026-10-16",
+      "source_file": "list_finmon.html",
+      "sha256": "3140e4d6cd9e5f6c3e03a9ccac42a60d1f2c0e781a6dee4989d55e2cc7968b81"
+    }
+  },
+  "verified": [
+    {
+      "username": "ivarlamov",
+      "registry_name": "Варламов Илья Александрович",
+      "minjust_record_number": "560",
+      "source_range": "'Лист 1'!A723:F723",
+      "identity_evidence": [
+        "https://www.youtube.com/@varlamov",
+        "https://vk.com/varlamov",
+        "https://ok.ru/varlamov",
+        "https://dzen.ru/varlamov",
+        "https://t.me/varlamov",
+        "https://www.tiktok.com/@ivarlamov",
+        "https://varlamov.ru/",
+        "https://x.com/varlamov",
+        "https://www.facebook.com/varlamov",
+        "https://www.facebook.com/ivarlamov",
+        "https://www.instagram.com/varlamov/",
+        "https://www.youtube.com/@Varlamov.Travel",
+        "https://varlamov.me"
+      ],
+      "rosfinmonitoring_record_number": "4200",
+      "birth_date_matches_between_registries": true
+    },
+    {
+      "username": "olegtinkov",
+      "registry_name": "Тиньков Олег Юрьевич",
+      "minjust_record_number": "768",
+      "source_range": "'Лист 1'!A515:F515",
+      "identity_evidence": [
+        "https://www.instagram.com/olegtinkov/",
+        "https://vk.com/olegtinkov",
+        "https://www.youtube.com/@OlegTinkov"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "sguriev",
+      "registry_name": "Гуриев Сергей Маратович",
+      "minjust_record_number": "556",
+      "source_range": "'Лист 1'!A727:F727",
+      "identity_evidence": [
+        "https://x.com/sguriev",
+        "https://sites.google.com/site/sguriev/"
+      ],
+      "rosfinmonitoring_record_number": "6106",
+      "birth_date_matches_between_registries": true
+    },
+    {
+      "username": "max_katz",
+      "registry_name": "Кац Максим Евгеньевич",
+      "minjust_record_number": "403",
+      "source_range": "'Лист 1'!A880:F880",
+      "identity_evidence": [
+        "https://www.youtube.com/@Max_Katz",
+        "https://x.com/max_katz",
+        "https://boosty.to/max_katz"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "mich261213",
+      "registry_name": "Ходорковский Михаил Борисович",
+      "minjust_record_number": "389",
+      "source_range": "'Лист 1'!A894:F894",
+      "identity_evidence": [
+        "https://x.com/mich261213"
+      ],
+      "rosfinmonitoring_record_number": "20998",
+      "birth_date_matches_between_registries": true
+    },
+    {
+      "username": "leonidvolkov",
+      "registry_name": "Волков Леонид Михайлович",
+      "minjust_record_number": "372",
+      "source_range": "'Лист 1'!A911:F911",
+      "identity_evidence": [
+        "https://x.com/leonidvolkov",
+        "https://www.instagram.com/leonidvolkov/",
+        "https://www.threads.com/@leonidvolkov"
+      ],
+      "rosfinmonitoring_record_number": "4537",
+      "birth_date_matches_between_registries": true
+    },
+    {
+      "username": "masha_borzo",
+      "registry_name": "Борзунова Мария Михайловна",
+      "minjust_record_number": "341",
+      "source_range": "'Лист 1'!A942:F942",
+      "identity_evidence": [
+        "https://x.com/mborzunova",
+        "https://www.instagram.com/masha_borzo/"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "aavst",
+      "registry_name": "Венедиктов Алексей Алексеевич",
+      "minjust_record_number": "369",
+      "source_range": "'Лист 1'!A914:F914",
+      "identity_evidence": [
+        "https://t.me/aavst",
+        "https://www.instagram.com/aavst/"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "alrod",
+      "registry_name": "Роднянский Александр Ефимович",
+      "minjust_record_number": "460",
+      "source_range": "'Лист 1'!A823:F823",
+      "identity_evidence": [
+        "https://www.instagram.com/alexander.rodnyansky/"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "roizmangbn",
+      "registry_name": "Ройзман Евгений Вадимович",
+      "minjust_record_number": "489",
+      "source_range": "'Лист 1'!A794:F794",
+      "identity_evidence": [
+        "https://x.com/roizmangbn",
+        "https://www.facebook.com/roizmangbn"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "michaelnacke",
+      "registry_name": "Наки Майкл Сидней",
+      "minjust_record_number": "428",
+      "source_range": "'Лист 1'!A855:F855",
+      "identity_evidence": [
+        "https://x.com/michaelnacke"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "verzilov",
+      "registry_name": "Верзилов Петр Юрьевич",
+      "minjust_record_number": "257",
+      "source_range": "'Лист 1'!A1026:F1026",
+      "identity_evidence": [
+        "https://x.com/gruppa_voina",
+        "https://www.instagram.com/petyaverzilov/"
+      ],
+      "rosfinmonitoring_record_number": "4365",
+      "birth_date_matches_between_registries": true
+    },
+    {
+      "username": "kudriavtsev",
+      "registry_name": "Кудрявцев Демьян Борисович",
+      "minjust_record_number": "1081",
+      "source_range": "'Лист 1'!A202:F202",
+      "identity_evidence": [
+        "https://www.instagram.com/damiank",
+        "https://www.threads.com/@damiank"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "ioannzh",
+      "registry_name": "Жданов Иван Юрьевич",
+      "minjust_record_number": "419",
+      "source_range": "'Лист 1'!A864:F864",
+      "identity_evidence": [
+        "https://t.me/ioannZH",
+        "https://www.youtube.com/@ioannzh/",
+        "https://vk.com/ioannzh",
+        "https://www.instagram.com/ioannzh/",
+        "https://x.com/IoannZH",
+        "https://www.patreon.com/ioannzh"
+      ],
+      "rosfinmonitoring_record_number": "7513",
+      "birth_date_matches_between_registries": true
+    },
+    {
+      "username": "shaveddinov",
+      "registry_name": "Шаведдинов Руслан Табризович",
+      "minjust_record_number": "405",
+      "source_range": "'Лист 1'!A878:F878",
+      "identity_evidence": [
+        "https://vk.com/shaveddinov",
+        "https://www.youtube.com/@shaveddinov",
+        "https://www.instagram.com/rshaveddinov/",
+        "https://x.com/rshaveddinov",
+        "https://www.threads.net/@rshaveddinov"
+      ],
+      "rosfinmonitoring_record_number": "21783",
+      "birth_date_matches_between_registries": true
+    },
+    {
+      "username": "pevchikh",
+      "registry_name": "Певчих Мария Константиновна",
+      "minjust_record_number": "592",
+      "source_range": "'Лист 1'!A691:F691",
+      "identity_evidence": [
+        "https://x.com/pevchikh"
+      ],
+      "rosfinmonitoring_record_number": "15557",
+      "birth_date_matches_between_registries": true
+    },
+    {
+      "username": "adagamov",
+      "registry_name": "Адагамов Рустем Ринатович \"Drugoi\"",
+      "minjust_record_number": "942",
+      "source_range": "'Лист 1'!A341:F341",
+      "identity_evidence": [
+        "https://www.facebook.com/adagamov",
+        "https://www.instagram.com/adagamov/",
+        "https://substack.com/@adagamov",
+        "https://x.com/adagamov"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "romenskiy",
+      "registry_name": "Роменский Владимир Андреевич",
+      "minjust_record_number": "471",
+      "source_range": "'Лист 1'!A812:F812",
+      "identity_evidence": [
+        "https://www.threads.com/@romenskiy"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "mikhailfishman",
+      "registry_name": "Фишман Михаил Владимирович",
+      "minjust_record_number": "497",
+      "source_range": "'Лист 1'!A786:F786",
+      "identity_evidence": [
+        "https://x.com/MikhailFishman"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "pivo-varov",
+      "registry_name": "Пивоваров Алексей Владимирович",
+      "minjust_record_number": "395",
+      "source_range": "'Лист 1'!A888:F888",
+      "identity_evidence": [
+        "https://www.instagram.com/pivo_varov/",
+        "https://x.com/pivo_varov"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "shats",
+      "registry_name": "Шац Михаил Григорьевич",
+      "minjust_record_number": "422",
+      "source_range": "'Лист 1'!A861:F861",
+      "identity_evidence": [
+        "https://dzen.ru/mikhailshats",
+        "https://shats.net/",
+        "https://www.instagram.com/mikhailshats/",
+        "https://boosty.to/shats"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "t_felg",
+      "registry_name": "Шадрина Татьяна Владимировна",
+      "minjust_record_number": "464",
+      "source_range": "'Лист 1'!A819:F819",
+      "identity_evidence": [
+        "https://x.com/t_felg",
+        "https://boosty.to/t_felg"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "plushev",
+      "registry_name": "Плющев Александр Владимирович",
+      "minjust_record_number": "462",
+      "source_range": "'Лист 1'!A821:F821",
+      "identity_evidence": [
+        "https://x.com/plushev",
+        "https://www.facebook.com/plushev",
+        "https://www.instagram.com/plushev/",
+        "https://boosty.to/plushev"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "zygaro",
+      "registry_name": "Зыгарь Михаил Викторович",
+      "minjust_record_number": "457",
+      "source_range": "'Лист 1'!A826:F826",
+      "identity_evidence": [
+        "https://www.instagram.com/zygaro/",
+        "https://www.youtube.com/@zygaro",
+        "https://vk.com/zygaro",
+        "https://www.threads.com/@zygaro",
+        "https://www.facebook.com/zygaro",
+        "https://x.com/zygaro"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "glukhovsky",
+      "registry_name": "Глуховский Дмитрий Алексеевич",
+      "minjust_record_number": "439",
+      "source_range": "'Лист 1'!A844:F844",
+      "identity_evidence": [
+        "https://instagram.com/glukhovsky",
+        "https://x.com/glukhovsky",
+        "https://www.threads.com/@glukhovsky"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "nevzorovag",
+      "registry_name": "Невзоров Александр Глебович",
+      "minjust_record_number": "373",
+      "source_range": "'Лист 1'!A910:F910",
+      "identity_evidence": [
+        "https://x.com/NevzorovAG",
+        "https://www.instagram.com/nevzorovofficial"
+      ],
+      "rosfinmonitoring_record_number": "14476",
+      "birth_date_matches_between_registries": true
+    },
+    {
+      "username": "aleshru",
+      "registry_name": "Алешковский Дмитрий Петрович",
+      "minjust_record_number": "408",
+      "source_range": "'Лист 1'!A875:F875",
+      "identity_evidence": [
+        "https://x.com/aleshru"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "ilyanovikov",
+      "registry_name": "Новиков Илья Сергеевич",
+      "minjust_record_number": "485",
+      "source_range": "'Лист 1'!A798:F798",
+      "identity_evidence": [
+        "https://x.com/vertiporokh",
+        "https://www.instagram.com/vertiporokh_/"
+      ],
+      "rosfinmonitoring_record_number": "14745",
+      "birth_date_matches_between_registries": true
+    },
+    {
+      "username": "lizaosetinskaya",
+      "registry_name": "Осетинская Елизавета Николаевна",
+      "minjust_record_number": "347",
+      "source_range": "'Лист 1'!A936:F936",
+      "identity_evidence": [
+        "https://www.instagram.com/osetinskayaliza",
+        "https://t.me/osetinskayaliza"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "katya.gordeeva",
+      "registry_name": "Гордеева Катерина Владимировна",
+      "minjust_record_number": "417",
+      "source_range": "'Лист 1'!A866:F866",
+      "identity_evidence": [
+        "https://www.instagram.com/catherinagordeeva/"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "iliyaprusikin",
+      "registry_name": "Прусикин Илья Владимирович",
+      "minjust_record_number": "530",
+      "source_range": "'Лист 1'!A753:F753",
+      "identity_evidence": [
+        "https://vk.com/iliyaprusikin",
+        "https://www.facebook.com/iliyaprusikin",
+        "https://www.instagram.com/iliyaprusikin/"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "tikhondzyadko",
+      "registry_name": "Дзядко Тихон Викторович",
+      "minjust_record_number": "451",
+      "source_range": "'Лист 1'!A832:F832",
+      "identity_evidence": [
+        "https://www.instagram.com/tikhondzyadko/",
+        "https://x.com/tikhondzyadko"
+      ],
+      "rosfinmonitoring_record_number": "6809",
+      "birth_date_matches_between_registries": true
+    },
+    {
+      "username": "nezlob",
+      "registry_name": "Незлобин Александр Васильевич",
+      "minjust_record_number": "1250",
+      "source_range": "'Лист 1'!A33:F33",
+      "identity_evidence": [
+        "https://instagram.com/nezlobinofficial",
+        "https://www.youtube.com/@nezlob/"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "nadyariot",
+      "registry_name": "Толоконникова Надежда Андреевна",
+      "minjust_record_number": "326",
+      "source_range": "'Лист 1'!A957:F957",
+      "identity_evidence": [
+        "https://x.com/nadyariot"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "smirnov_mz",
+      "registry_name": "Смирнов Сергей Сергеевич",
+      "minjust_record_number": "281",
+      "source_range": "'Лист 1'!A1002:F1002",
+      "identity_evidence": [
+        "https://www.youtube.com/@sssmirnov",
+        "https://www.patreon.com/sssmirnov",
+        "https://boosty.to/sssmirnov",
+        "https://x.com/sssmirnov",
+        "https://www.instagram.com/sssmirnov/"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "kshn",
+      "registry_name": "Кашин Олег Владимирович",
+      "minjust_record_number": "393",
+      "source_range": "'Лист 1'!A890:F890",
+      "identity_evidence": [
+        "https://vk.com/kshn",
+        "https://www.instagram.com/kshn",
+        "https://www.youtube.com/@KSHN",
+        "https://x.com/KSHN"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "sparkhom",
+      "registry_name": "Пархоменко Сергей Борисович",
+      "minjust_record_number": "374",
+      "source_range": "'Лист 1'!A909:F909",
+      "identity_evidence": [
+        "https://www.youtube.com/@sparkhom",
+        "https://www.instagram.com/sparkhom",
+        "https://new.donatepay.ru/@sparkhom"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "bahaooo",
+      "registry_name": "Кукушкин Никита Андреевич",
+      "minjust_record_number": "767",
+      "source_range": "'Лист 1'!A516:F516",
+      "identity_evidence": [
+        "https://www.instagram.com/bahaooo/"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "gudkovd",
+      "registry_name": "Гудков Дмитрий Геннадьевич",
+      "minjust_record_number": "543",
+      "source_range": "'Лист 1'!A740:F740",
+      "identity_evidence": [
+        "https://x.com/gudkovd",
+        "https://www.instagram.com/d_gudkov/"
+      ],
+      "rosfinmonitoring_record_number": "6032",
+      "birth_date_matches_between_registries": true
+    },
+    {
+      "username": "babloyan",
+      "registry_name": "Баблоян Ирина Арамовна",
+      "minjust_record_number": "975",
+      "source_range": "'Лист 1'!A308:F308",
+      "identity_evidence": [
+        "https://www.instagram.com/babloyan/",
+        "https://www.threads.net/@babloyan"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "zicer",
+      "registry_name": "Зицер Вадим Семенович \"Дима Зицер\"",
+      "minjust_record_number": "923",
+      "source_range": "'Лист 1'!A360:F360",
+      "identity_evidence": [
+        "https://vk.com/zicer",
+        "https://www.youtube.com/@dimazicer",
+        "https://www.instagram.com/dimazicer"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "albats",
+      "registry_name": "Альбац Евгения Марковна",
+      "minjust_record_number": "409",
+      "source_range": "'Лист 1'!A874:F874",
+      "identity_evidence": [
+        "https://x.com/albats",
+        "https://boosty.to/albats"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "nixelpixel",
+      "registry_name": "Водвуд Вераника Сергеевна",
+      "minjust_record_number": "559",
+      "source_range": "'Лист 1'!A724:F724",
+      "identity_evidence": [
+        "https://www.youtube.com/@nixelpixel",
+        "https://www.instagram.com/nixelpixel/",
+        "https://www.facebook.com/nixelpixel",
+        "https://vk.com/nixelpixel",
+        "https://nixelpixel.com",
+        "https://www.patreon.com/nixelpixel",
+        "https://x.com/nixelpixel"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "antonss",
+      "registry_name": "Суворкин Антон Владимирович \"Anton S\"",
+      "minjust_record_number": "926",
+      "source_range": "'Лист 1'!A357:F357",
+      "identity_evidence": [
+        "https://www.instagram.com/suvorkin",
+        "https://www.facebook.com/suvorkin"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "galerist",
+      "registry_name": "Гельман Марат Александрович",
+      "minjust_record_number": "324",
+      "source_range": "'Лист 1'!A959:F959",
+      "identity_evidence": [
+        "https://x.com/galerist",
+        "https://www.instagram.com/galerist/",
+        "https://www.threads.com/@galerist"
+      ],
+      "rosfinmonitoring_record_number": "5435",
+      "birth_date_matches_between_registries": true
+    },
+    {
+      "username": "vasyaoblomov",
+      "registry_name": "Гончаров Василий Владимирович \"Вася Обломов\"",
+      "minjust_record_number": "979",
+      "source_range": "'Лист 1'!A304:F304",
+      "identity_evidence": [
+        "https://www.instagram.com/vasyaoblomov",
+        "https://www.facebook.com/vasyaoblomov",
+        "http://www.youtube.com/vasyaoblomov",
+        "https://www.patreon.com/vasyaoblomov"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "markfeygin",
+      "registry_name": "Фейгин Марк Захарович",
+      "minjust_record_number": "356",
+      "source_range": "'Лист 1'!A927:F927",
+      "identity_evidence": [
+        "https://t.me/MarkFeygin",
+        "https://www.instagram.com/mark_feygin",
+        "https://x.com/feyginmark4"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "karenshain",
+      "registry_name": "Шаинян Карен Багратович",
+      "minjust_record_number": "365",
+      "source_range": "'Лист 1'!A918:F918",
+      "identity_evidence": [
+        "https://vk.com/karenshain",
+        "https://www.instagram.com/karenshain/"
+      ],
+      "rosfinmonitoring_record_number": "21822",
+      "birth_date_matches_between_registries": true
+    },
+    {
+      "username": "evgenyfeldman",
+      "registry_name": "Фельдман Евгений Олегович",
+      "minjust_record_number": "1001",
+      "source_range": "'Лист 1'!A282:F282",
+      "identity_evidence": [
+        "https://bsky.app/profile/evgenyfeldman.bsky.social",
+        "https://www.instagram.com/evgenyfeldman/",
+        "https://x.com/evgenyfeldman",
+        "https://www.threads.net/@evgenyfeldman",
+        "https://www.patreon.com/evgenyfeldman",
+        "https://t.me/evgenyfeldman",
+        "https://www.youtube.com/@evgenyfeldman",
+        "https://vk.com/evgenyfeldman"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "atticus_flinch",
+      "registry_name": "Филиппов Иван Борисович",
+      "minjust_record_number": "796",
+      "source_range": "'Лист 1'!A487:F487",
+      "identity_evidence": [
+        "https://podcasts.apple.com/ru/podcast/иван-филиппов-тень-tosibosi-podcast/id1536395981?i=1000567232088"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "zelenyikot",
+      "registry_name": "Егоров Виталий Юрьевич \"Zelenyikot\"",
+      "minjust_record_number": "1124",
+      "source_range": "'Лист 1'!A159:F159",
+      "identity_evidence": [
+        "https://zelenyikot.livejournal.com/",
+        "https://www.instagram.com/zelenyikoteyka/",
+        "https://www.threads.net/@zelenyikoteyka",
+        "https://x.com/Zelenyikoteyka",
+        "https://www.facebook.com/zelenyikoteyka/",
+        "https://zelenyikot.com",
+        "https://boosty.to/zelenyikot",
+        "https://teletype.in/@zelenyikot",
+        "https://www.patreon.com/zelenyikot",
+        "https://www.twitch.tv/zelenyikot"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "barabanch",
+      "registry_name": "Барабанов Илья Алексеевич",
+      "minjust_record_number": "797",
+      "source_range": "'Лист 1'!A486:F486",
+      "identity_evidence": [
+        "https://www.instagram.com/barabanch/"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "aburakova",
+      "registry_name": "Буракова Анастасия Андреевна",
+      "minjust_record_number": "726",
+      "source_range": "'Лист 1'!A557:F557",
+      "identity_evidence": [
+        "https://www.instagram.com/a_burakova",
+        "https://x.com/a_burakova",
+        "https://t.me/aburakova"
+      ],
+      "rosfinmonitoring_record_number": null,
+      "birth_date_matches_between_registries": false
+    },
+    {
+      "username": "pravoslovo",
+      "registry_name": "Лукьянова Елена Анатольевна",
+      "minjust_record_number": "847",
+      "source_range": "'Лист 1'!A436:F436",
+      "identity_evidence": [
+        "https://www.facebook.com/pravoslovo"
+      ],
+      "rosfinmonitoring_record_number": "11792",
+      "birth_date_matches_between_registries": true
+    }
+  ],
+  "unresolved": [
+    {
+      "username": "mishakoz",
+      "name": "Misha Kozyrev",
+      "existing_foreign_agent": true,
+      "reason": "Не подтверждена связь аккаунта с записью реестра."
+    },
+    {
+      "username": "kilgortraut",
+      "name": "Ilya Azar",
+      "existing_foreign_agent": true,
+      "reason": "Не подтверждена связь аккаунта с записью реестра."
+    },
+    {
+      "username": "m_ganapolsky",
+      "name": "Matvey Ganapolsky",
+      "existing_foreign_agent": true,
+      "reason": "Не подтверждена связь аккаунта с записью реестра."
+    },
+    {
+      "username": "linorg",
+      "name": "Linor Goralik",
+      "existing_foreign_agent": true,
+      "reason": "Не подтверждена связь аккаунта с записью реестра."
+    },
+    {
+      "username": "podarok",
+      "name": "Natalia Sindeeva",
+      "existing_foreign_agent": true,
+      "reason": "Не подтверждена связь аккаунта с записью реестра."
+    },
+    {
+      "username": "semyonslepakov",
+      "name": "Slepakov Semyon",
+      "existing_foreign_agent": false,
+      "reason": "Не подтверждена связь аккаунта с записью реестра."
+    },
+    {
+      "username": "dmitriy.gordon",
+      "name": "Dmitriy Gordon .gordon",
+      "existing_foreign_agent": false,
+      "reason": "Не подтверждена связь аккаунта с записью реестра."
+    },
+    {
+      "username": "ne_chichvarkin",
+      "name": "Evgeny Chichvarkin",
+      "existing_foreign_agent": false,
+      "reason": "Не подтверждена связь аккаунта с записью реестра."
+    },
+    {
+      "username": "morgenxyu",
+      "name": "Alisher Morgenshtern",
+      "existing_foreign_agent": false,
+      "reason": "Не подтверждена связь аккаунта с записью реестра."
+    },
+    {
+      "username": "litvinovich",
+      "name": "Marina Litvinovich",
+      "existing_foreign_agent": false,
+      "reason": "Не подтверждена связь аккаунта с записью реестра."
+    },
+    {
+      "username": "vyrypaev",
+      "name": "Ivan Vyrypaev",
+      "existing_foreign_agent": false,
+      "reason": "Не подтверждена связь аккаунта с записью реестра."
+    },
+    {
+      "username": "iliaprusikin",
+      "name": "Ilia Prusikin",
+      "existing_foreign_agent": false,
+      "reason": "Нельзя переносить статус другого аккаунта или однофамильца; нужна дополнительная проверка личности."
+    },
+    {
+      "username": "timdziadko",
+      "name": "Timothy Dziadko",
+      "existing_foreign_agent": true,
+      "reason": "Нельзя переносить статус другого аккаунта или однофамильца; нужна дополнительная проверка личности."
+    },
+    {
+      "username": "chernyak",
+      "name": "Anton Chernyak",
+      "existing_foreign_agent": true,
+      "reason": "Нельзя переносить статус другого аккаунта или однофамильца; нужна дополнительная проверка личности."
+    },
+    {
+      "username": "sergmarkelov",
+      "name": "Sergei Markelov",
+      "existing_foreign_agent": false,
+      "reason": "Нельзя переносить статус другого аккаунта или однофамильца; нужна дополнительная проверка личности."
+    },
+    {
+      "username": "evgenychernyak",
+      "name": "Evgeny Chernyak",
+      "existing_foreign_agent": false,
+      "reason": "Нельзя переносить статус другого аккаунта или однофамильца; нужна дополнительная проверка личности."
+    }
+  ]
+}

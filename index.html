@@ -166,11 +166,14 @@
             border-radius: 12px;
             padding: 1.25rem;
             transition: all 0.2s ease;
-            cursor: pointer;
             position: relative;
         }
 
-        .card:hover {
+        .card-clickable {
+            cursor: pointer;
+        }
+
+        .card-clickable:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
@@ -667,7 +670,8 @@
 
             createUserCard(user) {
                 const card = document.createElement('div');
-                card.className = 'card';
+                const isRosfinmonitoring = user.registry_notes?.some(note => note.type === 'rosfinmonitoring');
+                card.className = isRosfinmonitoring ? 'card' : 'card card-clickable';
                 
                 const foreignAgentBadge = user.foreign_agent && !user.registry_notes?.length ? `
                     <span class="foreign-agent">
@@ -676,7 +680,7 @@
                     </span>
                 ` : '';
 
-                const twitterLink = user.twitter ? `
+                const twitterLink = !isRosfinmonitoring && user.twitter ? `
                     <a href="https://twitter.com/${user.twitter}" 
                        target="_blank" 
                        class="twitter-link"
@@ -717,9 +721,11 @@
 
                 this.appendRegistryNotes(card, user);
 
-                card.addEventListener('click', () => {
-                    window.open(user.profile_url, '_blank');
-                });
+                if (!isRosfinmonitoring) {
+                    card.addEventListener('click', () => {
+                        window.open(user.profile_url, '_blank');
+                    });
+                }
 
                 return card;
             }
